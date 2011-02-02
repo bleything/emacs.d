@@ -20,6 +20,10 @@
                     (or (buffer-file-name) load-file-name))
       vendor-dir (concat dotfiles-dir "vendor/"))
 
+;;; helper function to load files from the dotfile path
+(defun load-config (file)
+  (load-file (concat dotfiles-dir file)))
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Emacs Lisp Package Archive (aka ELPA)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -29,9 +33,7 @@
 (package-initialize)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;; Color Theme
+;;; Load Configs
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(add-to-list 'load-path (concat vendor-dir "color-theme"))
-(require 'color-theme)
-(color-theme-initialize)
+(load-config "window.el") ;; window settings (colors, status bars, etc)
