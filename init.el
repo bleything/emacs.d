@@ -27,3 +27,11 @@
 (add-to-list 'load-path (concat vendor-dir "/elpa"))
 (require 'package)
 (package-initialize)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Color Theme
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(add-to-list 'load-path (concat vendor-dir "/color-theme"))
+(require 'color-theme)
+(color-theme-initialize)

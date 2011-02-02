@@ -19,8 +19,10 @@ What's Inside?!
 
 * My own personal settings, tuned to be super rad
 * The [Emacs Lisp Package Archive][elpa], aka ELPA
+* The [color-theme][c-t] library
 
 [elpa]: http://tromey.com/elpa
+[c-t]: http://www.nongnu.org/color-theme
 
 Credits
 ------------------------------------------------------------------------
