@@ -19,3 +19,11 @@
 (setq dotfiles-dir (file-name-directory
                     (or (buffer-file-name) load-file-name))
       vendor-dir (concat dotfiles-dir "vendor"))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Emacs Lisp Package Archive (aka ELPA)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(add-to-list 'load-path (concat vendor-dir "/elpa"))
+(require 'package)
+(package-initialize)

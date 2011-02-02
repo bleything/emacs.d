@@ -18,6 +18,9 @@ What's Inside?!
 ------------------------------------------------------------------------
 
 * My own personal settings, tuned to be super rad
+* The [Emacs Lisp Package Archive][elpa], aka ELPA
+
+[elpa]: http://tromey.com/elpa
 
 Credits
 ------------------------------------------------------------------------
