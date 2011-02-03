@@ -17,12 +17,16 @@ Pretty straightforward. Just clone:
 What's Inside?!
 ------------------------------------------------------------------------
 
-* My own personal settings, tuned to be super rad
-* The [Emacs Lisp Package Archive][elpa], aka ELPA
-* The [color-theme][c-t] library
+My own personal settings, tuned to be super rad. Also, some plugins:
 
-[elpa]: http://tromey.com/elpa
-[c-t]: http://www.nongnu.org/color-theme
+* The [Emacs Lisp Package Archive](http://tromey.com/elpa), aka ELPA
+* [color-theme](http://www.nongnu.org/color-theme)
+
+Also, some color themes, all with slight modifications by me:
+
+* [Railscasts](https://github.com/olegshaldybin/color-theme-railscasts)
+* [Twilight](https://github.com/crafterm/twilight-emacs)
+* [Zen and Art](https://github.com/irfn/zen-and-art)
 
 Credits
 ------------------------------------------------------------------------

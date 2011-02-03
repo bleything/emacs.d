@@ -16,3 +16,13 @@
 (add-to-list 'load-path (concat vendor-dir "color-theme"))
 (require 'color-theme)
 (color-theme-initialize)
+
+;;; shortcuts for color schemes
+(setq colors-dir (concat dotfiles-dir "colors/"))
+
+;;; helper function for loading color themes
+(defun use-color-theme (name)
+  (load-file (concat colors-dir name ".el"))
+  (eval (read (concat "(color-theme-" name ")"))))
+
+(use-color-theme "zen-and-art")
