@@ -3,7 +3,7 @@
   (interactive)
   (color-theme-install
    '(color-theme-zen-and-art
-     ((background-color . "#191717")
+     ((background-color . "#121010") ;;; modified 02-Feb-2010, Ben Bleything
       (background-mode . dark)
       (border-color . "black")
       (cursor-color . "#A7A7A7")
