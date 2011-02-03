@@ -28,7 +28,8 @@
 ;;; Emacs Lisp Package Archive (aka ELPA)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(add-to-list 'load-path (concat vendor-dir "elpa"))
+(setq elpa-dir (concat dotfiles-dir "elpa/"))
+(add-to-list 'load-path elpa-dir)
 (require 'package)
 (package-initialize)
 
