@@ -14,3 +14,11 @@
 
 ;;; configure slime to use clisp
 (setq inferior-lisp-program "/usr/bin/env clisp")
+
+;;; enable paredit for (e)lisp
+(autoload 'paredit-mode "paredit"
+  "Minor mode for pseudo-structurally editing Lisp code."
+  t)
+
+(add-hook 'lisp-mode-hook (lambda () (paredit-mode +1)))
+(add-hook 'emacs-lisp-mode-hook (lambda () (paredit-mode +1)))

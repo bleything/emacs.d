@@ -21,6 +21,7 @@ My own personal settings, tuned to be super rad. Also, some plugins:
 
 * The [Emacs Lisp Package Archive](http://tromey.com/elpa), aka ELPA
 * [color-theme](http://www.nongnu.org/color-theme)
+* [paredit-mode](http://mumble.net/~campbell/emacs/paredit.el)
 * [SLIME](http://common-lisp.net/project/slime)
 
 Also, some color themes, all with slight modifications by me:
