@@ -29,6 +29,7 @@ Also, some color themes, all with slight modifications by me:
 * [Railscasts](https://github.com/olegshaldybin/color-theme-railscasts)
 * [Twilight](https://github.com/crafterm/twilight-emacs)
 * [Zen and Art](https://github.com/irfn/zen-and-art)
+* [Tomorrow Night](https://github.com/ChrisKempson/Tomorrow-Theme)
 
 Credits
 ------------------------------------------------------------------------

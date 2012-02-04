@@ -25,4 +25,5 @@
   (load-file (concat colors-dir name ".el"))
   (eval (read (concat "(color-theme-" name ")"))))
 
-(use-color-theme "zen-and-art")
+;;; ...aaand set our color theme
+(use-color-theme "tomorrow-night")
