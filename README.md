@@ -19,16 +19,17 @@ What's Inside?!
 
 My own personal settings, tuned to be super rad. Also, some plugins:
 
-* The [Emacs Lisp Package Archive](http://tromey.com/elpa), aka ELPA
+* [evil-mode](https://gitorious.org/evil/pages/Home)
 * [color-theme](http://www.nongnu.org/color-theme)
-* [paredit-mode](http://mumble.net/~campbell/emacs/paredit.el)
+* [markdown-mode](http://jblevins.org/projects/markdown-mode/)
+* [paredit](http://www.emacswiki.org/emacs/ParEdit)
+* [rainbow-delimiters](http://www.emacswiki.org/emacs/RainbowDelimiters)
 * [SLIME](http://common-lisp.net/project/slime)
 
-Also, some color themes, all with slight modifications by me:
+Also, some color themes, some with slight modifications by me:
 
 * [Railscasts](https://github.com/olegshaldybin/color-theme-railscasts)
 * [Twilight](https://github.com/crafterm/twilight-emacs)
-* [Zen and Art](https://github.com/irfn/zen-and-art)
 * [Tomorrow Night](https://github.com/ChrisKempson/Tomorrow-Theme)
 
 Credits
