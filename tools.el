@@ -16,6 +16,11 @@
 (require 'undo-tree)
 (require 'evil)
 
+;;; normally the cursor turns black in evil-mode... fix that
+(setq evil-normal-state-cursor '("grey62" box))
+(setq evil-insert-state-cursor '("grey62" bar))
+(setq evil-visual-state-cursor '("grey62" box))
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; magit
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
