@@ -37,5 +37,6 @@
 ;;; Load Configs
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(load-config "window.el")    ;; window settings (colors, status bars, etc)
 (load-config "languages.el") ;; settings for various languages
+(load-config "tools.el")     ;; settings for various tools
+(load-config "window.el")    ;; window settings (colors, status bars, etc)
