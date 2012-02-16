@@ -13,7 +13,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;; configure slime to use clisp
-(add-to-list 'load-path (concat vendor-dir "slime/"))
+(add-to-load-path "slime")
 (setq inferior-lisp-program "clisp")
 (require 'slime)
 (slime-setup)

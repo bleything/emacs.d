@@ -32,7 +32,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;; enable color-theme
-(add-to-list 'load-path (concat vendor-dir "color-theme"))
+(add-to-load-path "color-theme")
 (require 'color-theme)
 (color-theme-initialize)
 

@@ -20,12 +20,18 @@
                     (or (buffer-file-name) load-file-name))
       vendor-dir (concat dotfiles-dir "vendor/"))
 
-;;; add vendor/misc to load path
-(add-to-list 'load-path (concat vendor-dir "misc/"))
+;;; helper functions!
 
-;;; helper function to load files from the dotfile path
+; add path to load-path
+(defun add-to-load-path (path)
+  (add-to-list 'load-path (concat vendor-dir path "/")))
+
+; load files from the dotfile path
 (defun load-config (file)
   (load-file (concat dotfiles-dir file)))
+
+;;; add vendor/misc to load path
+(add-to-load-path "misc")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Emacs Lisp Package Archive (aka ELPA)
