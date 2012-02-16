@@ -13,7 +13,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (add-to-load-path "evil")
-(require 'undo-tree)
 (require 'evil)
 
 ;;; normally the cursor turns black in evil-mode... fix that

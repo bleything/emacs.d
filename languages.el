@@ -21,7 +21,7 @@
 (add-hook 'emacs-lisp-mode-hook (lambda () (paredit-mode +1)))
 
 ;;; enable rainbow-delimiters for (e)lisp
-(require 'rainbow-delimiters)
+(autoload 'rainbow-delimiters-mode "rainbow-delimiters" t)
 (add-hook 'lisp-mode-hook 'rainbow-delimiters-mode)
 (add-hook 'emacs-lisp-mode-hook 'rainbow-delimiters-mode)
 

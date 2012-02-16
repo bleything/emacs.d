@@ -33,7 +33,7 @@
 
 ;;; enable color-theme
 (add-to-load-path "color-theme")
-(require 'color-theme)
+(autoload 'color-theme-initialize "color-theme" t)
 (color-theme-initialize)
 
 ;;; shortcuts for color schemes
