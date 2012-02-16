@@ -12,12 +12,6 @@
 ;;; Lisp Setup
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;;; configure slime to use clisp
-(add-to-load-path "slime")
-(setq inferior-lisp-program "clisp")
-(require 'slime)
-(slime-setup)
-
 ;;; enable paredit for (e)lisp
 (autoload 'paredit-mode "paredit"
   "Minor mode for pseudo-structurally editing Lisp code."

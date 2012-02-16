@@ -14,3 +14,14 @@
 
 (add-to-load-path "magit")
 (require 'magit)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; slime
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; configure slime to use clisp
+(add-to-load-path "slime")
+(setq inferior-lisp-program "clisp")
+(require 'slime)
+(slime-setup)
+
