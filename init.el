@@ -20,6 +20,9 @@
                     (or (buffer-file-name) load-file-name))
       vendor-dir (concat dotfiles-dir "vendor/"))
 
+;;; add vendor/misc to load path
+(add-to-list 'load-path (concat vendor-dir "misc/"))
+
 ;;; helper function to load files from the dotfile path
 (defun load-config (file)
   (load-file (concat dotfiles-dir file)))
