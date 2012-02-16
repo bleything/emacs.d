@@ -14,7 +14,6 @@
 
 ;;; configure slime to use clisp
 (add-to-list 'load-path (concat vendor-dir "slime/"))
-;(setq inferior-lisp-program "/usr/bin/env clisp")
 (setq inferior-lisp-program "clisp")
 (require 'slime)
 (slime-setup)
@@ -26,6 +25,11 @@
 
 (add-hook 'lisp-mode-hook (lambda () (paredit-mode +1)))
 (add-hook 'emacs-lisp-mode-hook (lambda () (paredit-mode +1)))
+
+;;; enable rainbow-delimiters for (e)lisp
+(require 'rainbow-delimiters)
+(add-hook 'lisp-mode-hook 'rainbow-delimiters-mode)
+(add-hook 'emacs-lisp-mode-hook 'rainbow-delimiters-mode)
 
 ;;; disable automatic newlines in paredit
 ;; (eval-after-load 'paredit
