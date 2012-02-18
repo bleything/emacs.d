@@ -13,6 +13,21 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; basic configuration
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(setq make-backup-files nil)    ;; do not create file~ files
+(setq inhibit-startup-screen t) ;; do not show startup screen
+(column-number-mode t)          ;; show cursor position in status bar
+(delete-selection-mode t)       ;; typing over a selection deletes the
+                                ;; selected text
+
+;;; enable whitespace-mode for all buffers, showing trailing spaces,
+;;; tabs, and lines that extend past 80 characters
+(global-whitespace-mode t)
+(setq whitespace-style '(face trailing tabs lines-tail tab-mark))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Shortcuts
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
