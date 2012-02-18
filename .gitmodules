@@ -1,3 +1,0 @@
-[submodule "vendor/evil"]
-	path = vendor/evil
-	url = git://gitorious.org/evil/evil.git

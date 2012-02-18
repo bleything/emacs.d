@@ -13,10 +13,6 @@ Installation
 Pretty straightforward. Just clone:
 
     $ git clone git://github.com/bleything/dotemacs.git ~/.emacs.d
-	
-And pull in evil:
-
-	$ cd ~/.emacs.d && git submodule init && git submodule update
 
 What's Inside?!
 ------------------------------------------------------------------------
