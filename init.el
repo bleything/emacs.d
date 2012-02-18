@@ -29,24 +29,12 @@
 (setq whitespace-style '(face trailing tabs lines-tail tab-mark))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;; Shortcuts
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-(setq vendor-dir (concat user-emacs-directory "vendor/"))
-
-;;; helper functions!
-
-; add path to load-path
-(defun add-to-load-path (path)
-  (add-to-list 'load-path (concat vendor-dir path "/")))
-
-; load files from the dotfile path
-(defun load-config (file)
-  (load-file (concat user-emacs-directory file)))
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Load Configs
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; load files from the dotfile path
+(defun load-config (file)
+  (load-file (concat user-emacs-directory file)))
 
 (load-config "languages.el") ;; settings for various languages
 (load-config "tools.el")     ;; settings for various tools

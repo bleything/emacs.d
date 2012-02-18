@@ -23,7 +23,6 @@
 ;;; evil
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(add-to-load-path "evil")
 (require 'evil)
 
 ;;; normally the cursor turns black in evil-mode... fix that
@@ -35,15 +34,15 @@
 ;;; magit
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(add-to-load-path "magit")
 (require 'magit)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; slime
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;;; configure slime to use clisp
-(add-to-load-path "slime")
-(setq inferior-lisp-program "clisp")
+(add-to-list 'load-path (concat user-emacs-directory "vendor/slime"))
 (require 'slime)
+
+;;; configure slime to use clisp
+(setq inferior-lisp-program "clisp")
 (slime-setup)
