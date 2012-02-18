@@ -47,6 +47,7 @@
 (defun load-config (file)
   (load-file (concat user-emacs-directory file)))
 
+(load-config "functions.el") ;; personal helper functions
 (load-config "languages.el") ;; settings for various languages
 (load-config "tools.el")     ;; settings for various tools
 (load-config "window.el")    ;; window settings (colors, status bars, etc)
