@@ -31,17 +31,9 @@
 ;;; Color Options
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;;; enable color-theme
-(add-to-load-path "color-theme")
-(autoload 'color-theme-initialize "color-theme" t)
-(color-theme-initialize)
-
-;;; shortcuts for color schemes
-(setq colors-dir (concat user-emacs-directory "colors/"))
-
 ;;; helper function for loading color themes
 (defun use-color-theme (name)
-  (load-file (concat colors-dir name ".el"))
+  (load-file (concat user-emacs-directory "colors/" name ".el"))
   (eval (read (concat "(color-theme-" name ")"))))
 
 ;;; ...aaand set our color theme
