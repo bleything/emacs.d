@@ -37,7 +37,7 @@
 (color-theme-initialize)
 
 ;;; shortcuts for color schemes
-(setq colors-dir (concat dotfiles-dir "colors/"))
+(setq colors-dir (concat user-emacs-directory "colors/"))
 
 ;;; helper function for loading color themes
 (defun use-color-theme (name)
