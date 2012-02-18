@@ -43,9 +43,6 @@
 (defun load-config (file)
   (load-file (concat user-emacs-directory file)))
 
-;;; add vendor/misc to load path
-(add-to-load-path "misc")
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Load Configs
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

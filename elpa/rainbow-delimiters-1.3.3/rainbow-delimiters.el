@@ -26,7 +26,7 @@
 
 ;;; Commentary:
 ;;
-;; Rainbow-delimiters is a “rainbow parentheses”-like mode which highlights
+;; Rainbow-delimiters is a rainbow parentheses-like mode which highlights
 ;; parentheses, brackets, and braces according to their depth. Each
 ;; successive level is highlighted in a different color. This makes it easy
 ;; to spot matching delimiters, orient yourself in the code, and tell which

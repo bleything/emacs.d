@@ -1,3 +1,4 @@
+
 ;;; markdown-mode.el --- Emacs Major mode for Markdown-formatted text files
 
 ;; Copyright (C) 2007-2011 Jason R. Blevins <jrblevin@sdf.org>
@@ -92,7 +93,7 @@
 ;; the following lines to your `.emacs` file to associate markdown-mode
 ;; with `.text` files:
 ;;
-;;     (autoload 'markdown-mode "markdown-mode.el"
+;;     (autoload 'markdown-mode "markdown-mode"
 ;;        "Major mode for editing Markdown files" t)
 ;;     (setq auto-mode-alist
 ;;        (cons '("\\.text" . markdown-mode) auto-mode-alist))
@@ -162,6 +163,12 @@
 ;;     XHTML (default: `^\\(\<\?xml\\|\<!DOCTYPE\\|\<html\\)`).  If
 ;;     this is not matched, we assume this output is a fragment and add
 ;;     our own header and footer.
+;;
+;;   * `markdown-link-space-sub-char' - a character to replace spaces
+;;     when mapping wiki links to filenames (default: `_`).
+;;     For example, use an underscore for compatibility with the
+;;     Python Markdown WikiLinks extension or a hyphen for compatibility
+;;     with Github wiki links.
 ;;
 ;; Additionally, the faces used for syntax highlighting can be modified to
 ;; your liking by issuing `M-x customize-group RET markdown-faces`
@@ -352,6 +359,10 @@
 ;;     Markdown processors which do not accept input from stdin.
 ;;   * Werner Dittmann <werner.dittmann@t-online.de> for bug reports
 ;;     regarding the cl dependency and auto-fill-mode and indentation.
+;;   * Scott Pfister <scott.pfister@gmail.com> for generalizing the space
+;;     substitution character for mapping wiki links to filenames.
+;;   * Marcin Kasperski <marcin.kasperski@mekk.waw.pl> for a patch to
+;;     escape shell commands.
 
 ;;; Bugs:
 
@@ -483,6 +494,12 @@ This will not take effect until Emacs is restarted."
   :group 'markdown
   :type 'regexp)
 
+(defcustom markdown-link-space-sub-char
+  "_"
+  "Character to use instead of spaces when mapping wiki links to filenames."
+  :group 'markdown
+  :type 'string)
+
 ;;; Font lock =================================================================
 
 (require 'font-lock)
@@ -553,102 +570,102 @@ This will not take effect until Emacs is restarted."
   :group 'faces)
 
 (defface markdown-italic-face
-  '((t :inherit font-lock-variable-name-face :italic t))
+  '((t (:inherit font-lock-variable-name-face :slant italic)))
   "Face for italic text."
   :group 'markdown-faces)
 
 (defface markdown-bold-face
-  '((t :inherit font-lock-variable-name-face :bold t))
+  '((t (:inherit font-lock-variable-name-face :weight bold)))
   "Face for bold text."
   :group 'markdown-faces)
 
 (defface markdown-header-face
-  '((t :inherit font-lock-function-name-face :weight bold))
+  '((t (:inherit font-lock-function-name-face :weight bold)))
   "Base face for headers."
   :group 'markdown-faces)
 
 (defface markdown-header-face-1
-  '((t :inherit markdown-header-face))
+  '((t (:inherit markdown-header-face)))
   "Face for level-1 headers."
   :group 'markdown-faces)
 
 (defface markdown-header-face-2
-  '((t :inherit markdown-header-face))
+  '((t (:inherit markdown-header-face)))
   "Face for level-2 headers."
   :group 'markdown-faces)
 
 (defface markdown-header-face-3
-  '((t :inherit markdown-header-face))
+  '((t (:inherit markdown-header-face)))
   "Face for level-3 headers."
   :group 'markdown-faces)
 
 (defface markdown-header-face-4
-  '((t :inherit markdown-header-face))
+  '((t (:inherit markdown-header-face)))
   "Face for level-4 headers."
   :group 'markdown-faces)
 
 (defface markdown-header-face-5
-  '((t :inherit markdown-header-face))
+  '((t (:inherit markdown-header-face)))
   "Face for level-5 headers."
   :group 'markdown-faces)
 
 (defface markdown-header-face-6
-  '((t :inherit markdown-header-face))
+  '((t (:inherit markdown-header-face)))
   "Face for level-6 headers."
   :group 'markdown-faces)
 
 (defface markdown-inline-code-face
-  '((t :inherit font-lock-constant-face))
+  '((t (:inherit font-lock-constant-face)))
   "Face for inline code."
   :group 'markdown-faces)
 
 (defface markdown-list-face
-  '((t :inherit font-lock-builtin-face))
+  '((t (:inherit font-lock-builtin-face)))
   "Face for list item markers."
   :group 'markdown-faces)
 
 (defface markdown-blockquote-face
-  '((t :inherit font-lock-doc-face))
+  '((t (:inherit font-lock-doc-face)))
   "Face for blockquote sections."
   :group 'markdown-faces)
 
 (defface markdown-pre-face
-  '((t :inherit font-lock-constant-face))
+  '((t (:inherit font-lock-constant-face)))
   "Face for preformatted text."
   :group 'markdown-faces)
 
 (defface markdown-link-face
-  '((t :inherit font-lock-keyword-face))
+  '((t (:inherit font-lock-keyword-face)))
   "Face for links."
   :group 'markdown-faces)
 
 (defface markdown-missing-link-face
-  '((t :inherit font-lock-warning-face))
+  '((t (:inherit font-lock-warning-face)))
   "Face for missing links."
   :group 'markdown-faces)
 
 (defface markdown-reference-face
-  '((t :inherit font-lock-type-face))
+  '((t (:inherit font-lock-type-face)))
   "Face for link references."
   :group 'markdown-faces)
 
 (defface markdown-url-face
-  '((t :inherit font-lock-string-face))
+  '((t (:inherit font-lock-string-face)))
   "Face for URLs."
   :group 'markdown-faces)
 
 (defface markdown-link-title-face
-  '((t :inherit font-lock-comment-face))
+  '((t (:inherit font-lock-comment-face)))
   "Face for reference link titles."
   :group 'markdown-faces)
 
 (defface markdown-comment-face
-  '((t :inherit font-lock-comment-face))
+  '((t (:inherit font-lock-comment-face)))
   "Face for HTML comments."
   :group 'markdown-faces)
 
 (defface markdown-math-face
-  '((t :inherit font-lock-string-face))
+  '((t (:inherit font-lock-string-face)))
   "Face for LaTeX expressions."
   :group 'markdown-faces)
 
@@ -780,6 +797,9 @@ text.")
    (cons markdown-regex-hr 'markdown-header-face)
    '(markdown-match-comments 0 markdown-comment-face t t)
    (cons markdown-regex-code '(2 markdown-inline-code-face))
+   (cons markdown-regex-angle-uri 'markdown-link-face)
+   (cons markdown-regex-uri 'markdown-link-face)
+   (cons markdown-regex-email 'markdown-link-face)
    (cons markdown-regex-list 'markdown-list-face)
    (cons markdown-regex-link-inline
          '((1 markdown-link-face t)
@@ -793,9 +813,6 @@ text.")
            (3 markdown-link-title-face t)))
    (cons markdown-regex-bold '(2 markdown-bold-face))
    (cons markdown-regex-italic '(2 markdown-italic-face))
-   (cons markdown-regex-angle-uri 'markdown-link-face)
-   (cons markdown-regex-uri 'markdown-link-face)
-   (cons markdown-regex-email 'markdown-link-face)
    )
   "Syntax highlighting for Markdown files.")
 
@@ -817,6 +834,17 @@ text.")
        markdown-mode-font-lock-keywords-latex)
    markdown-mode-font-lock-keywords-basic)
   "Default highlighting expressions for Markdown mode.")
+
+
+
+;;; Compatibility =============================================================
+
+;; Handle replace-regexp-in-string in XEmacs 21
+(defun markdown-replace-regexp-in-string (regexp rep string)
+  "Compatibility wrapper to provide `replace-regexp-in-string'."
+  (if (featurep 'xemacs)
+      (replace-in-string string regexp rep)
+    (replace-regexp-in-string regexp rep string)))
 
 
 
@@ -1433,9 +1461,9 @@ it in the usual way."
 ;;; Undefined reference checking code by Dmitry Dzhus <mail@sphinx.net.ru>.
 
 (defconst markdown-refcheck-buffer
-  "*Undefined references for %BUFFER%*"
+  "*Undefined references for %buffer%*"
   "Pattern for name of buffer for listing undefined references.
-The string %BUFFER% will be replaced by the corresponding
+The string %buffer% will be replaced by the corresponding
 `markdown-mode' buffer name.")
 
 (defun markdown-has-reference-definition (reference)
@@ -1531,9 +1559,9 @@ defined."
     (error "Not available in current mode"))
   (let ((oldbuf (current-buffer))
         (refs (markdown-get-undefined-refs))
-        (refbuf (get-buffer-create (replace-regexp-in-string
-                                 "%BUFFER%" (buffer-name)
-                                 markdown-refcheck-buffer t))))
+        (refbuf (get-buffer-create (markdown-replace-regexp-in-string
+                                 "%buffer%" (buffer-name)
+                                 markdown-refcheck-buffer))))
     (if (null refs)
         (progn
           (when (not silent)
@@ -1703,7 +1731,8 @@ Calls `markdown-cycle' with argument t."
         ;; Handle case when `markdown-command' does not read from stdin
         (if (not buffer-file-name)
             (error "Must be visiting a file")
-          (shell-command (concat markdown-command " " buffer-file-name)
+          (shell-command (concat markdown-command " "
+                                 (shell-quote-argument buffer-file-name))
                          output-buffer-name))
       ;; Pass region to `markdown-command' via stdin
       (shell-command-on-region begin-region end-region markdown-command
@@ -1805,11 +1834,13 @@ be available via `match-string'."
 
 (defun markdown-convert-wiki-link-to-filename (name)
   "Generate a filename from the wiki link NAME.
-Spaces are converted to underscores, following the convention
-used by the Python Markdown WikiLinks extension."
-  (let ((new-ext (file-name-extension (buffer-file-name)))
-	(new-basename (replace-regexp-in-string "[[:space:]\n]" "_" name)))
-    (concat new-basename "." new-ext)))
+Spaces in NAME are replaced with `markdown-link-space-sub-char'."
+  (let ((basename (markdown-replace-regexp-in-string
+                   "[[:space:]\n]" markdown-link-space-sub-char name)))
+    (concat basename
+            (if (buffer-file-name)
+                (concat "."
+                        (file-name-extension (buffer-file-name)))))))
 
 (defun markdown-follow-wiki-link (name)
   "Follow the wiki link NAME.
@@ -1847,14 +1878,13 @@ See `markdown-wiki-link-p'."
 
 (defun markdown-highlight-wiki-link (from to face)
   "Highlight the wiki link in the region between FROM and TO using FACE."
-  (let ((ov (make-overlay from to)))
-    (overlay-put ov 'face face)))
+  (put-text-property from to 'font-lock-face face))
 
 (defun markdown-unfontify-region-wiki-links (from to)
   "Remove wiki link faces from the region specified by FROM and TO."
   (interactive "nfrom: \nnto: ")
-  (remove-overlays from to 'face markdown-link-face)
-  (remove-overlays from to 'face markdown-missing-link-face))
+  (remove-text-properties from to '(font-lock-face markdown-link-face))
+  (remove-text-properties from to '(font-lock-face markdown-missing-link-face)))
 
 (defun markdown-fontify-region-wiki-links (from to)
   "Search region given by FROM and TO for wiki links and fontify them.
@@ -1916,7 +1946,9 @@ given range."
 	    ;; Now do the fontification.
 	    (markdown-fontify-region-wiki-links new-from new-to)))
       (unless modified
-	(restore-buffer-modified-p nil)))
+	(if (fboundp 'restore-buffer-modified-p)
+            (restore-buffer-modified-p nil)
+          (set-buffer-modified-p nil))))
     (goto-char current-point)))
 
 (defun markdown-fontify-buffer-wiki-links ()
