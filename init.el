@@ -28,15 +28,18 @@
 (global-whitespace-mode t)
 (setq whitespace-style '(face trailing tabs lines-tail tab-mark))
 
+;;; no tabs.
+(setq-default indent-tabs-mode nil)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; ELPA
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (require 'package)
 (setq package-archives '(
-			 ("gnu"       . "http://elpa.gnu.org/elpa/")
-			 ("marmalade" . "http://marmalade-repo.org/packages/")
-			 ("tromey"    . "http://tromey.com/elpa/")))
+                         ("gnu"       . "http://elpa.gnu.org/elpa/")
+                         ("marmalade" . "http://marmalade-repo.org/packages/")
+                         ("tromey"    . "http://tromey.com/elpa/")))
 (package-initialize)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
