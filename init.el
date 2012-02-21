@@ -31,6 +31,9 @@
 ;;; no tabs.
 (setq-default indent-tabs-mode nil)
 
+;;; add ~/.emacs.d/vendor to load path
+(add-to-list 'load-path (concat user-emacs-directory "vendor"))
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; ELPA
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
