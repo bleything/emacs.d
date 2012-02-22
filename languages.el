@@ -46,3 +46,12 @@
 
 (setq auto-mode-alist
   (cons '("\\.mkd" . markdown-mode) auto-mode-alist))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; prolog
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(setq prolog-system 'swi)
+(setq auto-mode-alist (append '(("\\.plg$" . prolog-mode)
+                                ("\\.m$" . mercury-mode))
+                              auto-mode-alist))
