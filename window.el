@@ -38,3 +38,11 @@
 
 ;;; ...aaand set our color theme
 (use-color-theme "tomorrow-night")
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; movement options
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; enable windmove with shift-arrow
+(windmove-default-keybindings)
+(setq windmove-wrap-around t)
