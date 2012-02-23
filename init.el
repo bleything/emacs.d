@@ -17,6 +17,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (require 'cl)                   ;; common lisp compatibility
+(server-start)                  ;; start server so clients can attach
 (setq make-backup-files nil)    ;; do not create file~ files
 (setq inhibit-startup-screen t) ;; do not show startup screen
 (column-number-mode t)          ;; show cursor position in status bar
