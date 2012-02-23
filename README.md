@@ -19,11 +19,14 @@ What's Inside?!
 
 My own personal settings, tuned to be super rad. Also, some plugins:
 
-* [evil-mode](https://gitorious.org/evil/pages/Home)
 * [color-theme](http://www.nongnu.org/color-theme)
+* [inf-ruby](https://github.com/nonsequitur/inf-ruby)
+* [magit](http://philjackson.github.com/magit/)
 * [markdown-mode](http://jblevins.org/projects/markdown-mode/)
 * [paredit](http://www.emacswiki.org/emacs/ParEdit)
+* [prolog-mode](http://www.emacswiki.org/emacs/PrologMode)
 * [rainbow-delimiters](http://www.emacswiki.org/emacs/RainbowDelimiters)
+* [ruby-mode](http://www.emacswiki.org/emacs/RubyMode)
 * [SLIME](http://common-lisp.net/project/slime)
 
 Also, some color themes, some with slight modifications by me:
