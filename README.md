@@ -26,6 +26,7 @@ My own personal settings, tuned to be super rad. Also, some plugins:
 * [paredit](http://www.emacswiki.org/emacs/ParEdit)
 * [prolog-mode](http://www.emacswiki.org/emacs/PrologMode)
 * [rainbow-delimiters](http://www.emacswiki.org/emacs/RainbowDelimiters)
+* [rainbow-mode](http://julien.danjou.info/software/rainbow-mode)
 * [ruby-mode](http://www.emacswiki.org/emacs/RubyMode)
 * [SLIME](http://common-lisp.net/project/slime)
 
