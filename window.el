@@ -46,3 +46,6 @@
 ;;; enable windmove with shift-arrow
 (windmove-default-keybindings)
 (setq windmove-wrap-around t)
+
+;;; enable visual window switcher
+(require 'switch-window)
