@@ -24,6 +24,10 @@
 (delete-selection-mode t)       ;; typing over a selection deletes the
                                 ;; selected text
 
+;;; make emacs ignore the right-side option key so it can be used for accented
+;;; characters and other OS-level stuff
+(setq ns-right-alternate-modifier 'none)
+
 ;;; enable whitespace-mode for all buffers, showing trailing spaces,
 ;;; tabs, and lines that extend past 80 characters
 (global-whitespace-mode t)
