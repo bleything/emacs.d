@@ -21,6 +21,8 @@
 (setq make-backup-files nil)    ;; do not create file~ files
 (setq inhibit-startup-screen t) ;; do not show startup screen
 (column-number-mode t)          ;; show cursor position in status bar
+(global-auto-revert-mode t)     ;; automatically update files that have
+                                ;; changed on disk
 (delete-selection-mode t)       ;; typing over a selection deletes the
                                 ;; selected text
 
