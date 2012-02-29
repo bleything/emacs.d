@@ -17,6 +17,13 @@
 (defalias 'ack-find-file 'ack-and-a-half-find-file)
 (defalias 'ack-find-file-same 'ack-and-a-half-find-file-same)
 
+;;; run ack-and-a-half on whatever the point is on
+(defun ack-at-point ()
+  (interactive)
+  (ack-and-a-half (thing-at-point 'symbol)))
+
+(global-set-key (kbd "C-x C-a") 'ack-at-point)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; ido
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
