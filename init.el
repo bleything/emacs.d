@@ -30,6 +30,9 @@
 ;;; characters and other OS-level stuff
 (setq ns-right-alternate-modifier 'none)
 
+;;; cmd-enter to fullscreen
+(global-set-key [(super return)] 'ns-toggle-fullscreen)
+
 ;;; enable whitespace-mode for all buffers, showing trailing spaces,
 ;;; tabs, and lines that extend past 80 characters
 (global-whitespace-mode t)
