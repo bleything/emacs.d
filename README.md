@@ -23,15 +23,18 @@ My own personal settings, tuned to be super rad. Also, some plugins:
 * [color-theme](http://www.nongnu.org/color-theme)
 * [inf-ruby](https://github.com/nonsequitur/inf-ruby)
 * [magit](http://philjackson.github.com/magit/)
-* [markdown-mode](http://jblevins.org/projects/markdown-mode/)
 * [paredit](http://www.emacswiki.org/emacs/ParEdit)
-* [prolog-mode](http://www.emacswiki.org/emacs/PrologMode)
 * [rainbow-delimiters](http://www.emacswiki.org/emacs/RainbowDelimiters)
 * [rainbow-mode](http://julien.danjou.info/software/rainbow-mode)
-* [ruby-mode](http://www.emacswiki.org/emacs/RubyMode)
 * [rvm](https://github.com/senny/rvm.el)
 * [SLIME](http://common-lisp.net/project/slime)
 * [switch-window](https://github.com/dimitri/switch-window)
+
+Also, some syntax definitions:
+
+* [markdown-mode](http://jblevins.org/projects/markdown-mode/)
+* [prolog-mode](http://www.emacswiki.org/emacs/PrologMode)
+* [ruby-mode](http://www.emacswiki.org/emacs/RubyMode)
 * [yaml-mode](https://github.com/yoshiki/yaml-mode)
 
 Also, some color themes, some with slight modifications by me:
