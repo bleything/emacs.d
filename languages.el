@@ -64,6 +64,28 @@
 ;;; disable inserting encoding comments in utf-8 files
 (setq ruby-insert-encoding-magic-comment nil)
 
+;;; indent arg lists like anything else
+(setq ruby-deep-arglist nil)
+(setq ruby-deep-indent-paren nil)
+(setq ruby-deep-indent-paren-style nil)
+
+;;; fix closing paren indentation. Stolen from
+;;; https://gist.github.com/1274520
+(defadvice ruby-indent-line (after unindent-closing-paren activate)
+  (let ((column (current-column))
+        indent offset)
+    (save-excursion
+      (back-to-indentation)
+      (let ((state (syntax-ppss)))
+        (setq offset (- column (current-column)))
+        (when (and (eq (char-after) ?\))
+                   (not (zerop (car state))))
+          (goto-char (cadr state))
+          (setq indent (current-indentation)))))
+    (when indent
+      (indent-line-to indent)
+      (when (> offset 0) (forward-char offset)))))
+
 ;;; enable rvm support
 (rvm-use-default)
 
