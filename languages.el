@@ -74,6 +74,9 @@
 ;; disable inserting encoding comments in utf-8 files
 (setq ruby-insert-encoding-magic-comment nil)
 
+;;; enable rvm support
+(rvm-use-default)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; YAML
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
