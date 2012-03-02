@@ -73,3 +73,11 @@
 
 ;; disable inserting encoding comments in utf-8 files
 (setq ruby-insert-encoding-magic-comment nil)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; YAML
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(autoload 'yaml-mode "yaml-mode")
+(add-to-list 'auto-mode-alist '(".yml" . yaml-mode))
+(add-to-list 'auto-mode-alist '(".yaml" . yaml-mode))

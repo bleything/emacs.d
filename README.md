@@ -31,6 +31,7 @@ My own personal settings, tuned to be super rad. Also, some plugins:
 * [ruby-mode](http://www.emacswiki.org/emacs/RubyMode)
 * [SLIME](http://common-lisp.net/project/slime)
 * [switch-window](https://github.com/dimitri/switch-window)
+* [yaml-mode](https://github.com/yoshiki/yaml-mode)
 
 Also, some color themes, some with slight modifications by me:
 
