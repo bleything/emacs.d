@@ -33,6 +33,7 @@
 
 ;;; helper function for loading color themes
 (defun use-color-theme (name)
+  (interactive "sColor theme: ")
   (load-file (concat user-emacs-directory "colors/" name ".el"))
   (eval (read (concat "(color-theme-" name ")"))))
 
