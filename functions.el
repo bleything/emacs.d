@@ -40,3 +40,9 @@
         (comment-or-uncomment-region
          (line-beginning-position)
          (line-end-position))))))
+
+;;; align on assignment or hashrocket
+(defun bb-align-assignment-or-hashrocket (beg end)
+  (interactive "r")
+  (align-regexp beg end "\\( \\)=>?"))
+(global-set-key (kbd "C-c [") 'bb-align-assignment-or-hashrocket)
