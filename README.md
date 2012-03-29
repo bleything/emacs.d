@@ -32,6 +32,7 @@ My own personal settings, tuned to be super rad. Also, some plugins:
 
 Also, some syntax definitions:
 
+* [io-mode](http://www.alcyone.com/software/io-mode/)
 * [markdown-mode](http://jblevins.org/projects/markdown-mode/)
 * [prolog-mode](http://www.emacswiki.org/emacs/PrologMode)
 * [ruby-mode](http://www.emacswiki.org/emacs/RubyMode)
