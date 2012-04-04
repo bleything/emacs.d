@@ -42,7 +42,7 @@
 (setq-default indent-tabs-mode nil)
 
 ;;; fill to 80 columns
-(setq fill-column 80)
+(setq-default fill-column 80)
 
 ;;; add ~/.emacs.d/vendor to load path
 (add-to-list 'load-path (concat user-emacs-directory "vendor"))
