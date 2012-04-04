@@ -50,6 +50,7 @@
 
 (autoload 'markdown-mode "markdown-mode")
 (add-to-list 'auto-mode-alist '("\\.mk?d$" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.markdown$" . markdown-mode))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; prolog
