@@ -68,6 +68,7 @@
 (add-to-list 'auto-mode-alist '("Gemfile" . ruby-mode))
 (add-to-list 'auto-mode-alist '("Rakefile" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.irbrc$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("config\\.ru$" . ruby-mode))
 
 ;;; disable inserting encoding comments in utf-8 files
 (setq ruby-insert-encoding-magic-comment nil)
