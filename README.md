@@ -36,6 +36,7 @@ Also, some syntax definitions:
 * [markdown-mode](http://jblevins.org/projects/markdown-mode/)
 * [prolog-mode](http://www.emacswiki.org/emacs/PrologMode)
 * [ruby-mode](http://www.emacswiki.org/emacs/RubyMode)
+* [scss-mode](https://github.com/antonj/scss-mode)
 * [yaml-mode](https://github.com/yoshiki/yaml-mode)
 
 Also, some color themes, some with slight modifications by me:
