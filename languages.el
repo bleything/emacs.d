@@ -22,13 +22,14 @@
 (add-to-list 'auto-mode-alist '("\\.io$" . io-mode))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;; Lisp
+;;; Lisps -- common lisp, clojure, elisp
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;;; enable paredit for (e)lisp
+;;; enable paredit
 (autoload 'paredit-mode "paredit")
 (add-hook 'lisp-mode-hook (lambda () (paredit-mode +1)))
 (add-hook 'emacs-lisp-mode-hook (lambda () (paredit-mode +1)))
+(add-hook 'clojure-mode-hook (lambda () (paredit-mode +1)))
 
 ;;; enable rainbow-delimiters for (e)lisp
 (autoload 'rainbow-delimiters-mode "rainbow-delimiters")
