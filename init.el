@@ -47,6 +47,10 @@
 ;;; add ~/.emacs.d/vendor to load path
 (add-to-list 'load-path (concat user-emacs-directory "vendor"))
 
+;;; add /usr/local/[s]bin to exec-path
+(add-to-list 'exec-path "/usr/local/sbin")
+(add-to-list 'exec-path "/usr/local/bin")
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; ELPA
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
