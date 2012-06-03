@@ -27,6 +27,7 @@ My own personal settings, tuned to be super rad. Also, some plugins:
 * [inf-ruby](https://github.com/nonsequitur/inf-ruby)
 * [magit](http://philjackson.github.com/magit/)
 * [paredit](http://www.emacswiki.org/emacs/ParEdit)
+* [pianobar](http://www.emacswiki.org/emacs/PianobarMode)
 * [rainbow-delimiters](http://www.emacswiki.org/emacs/RainbowDelimiters)
 * [rainbow-mode](http://julien.danjou.info/software/rainbow-mode)
 * [rvm](https://github.com/senny/rvm.el)
