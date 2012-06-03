@@ -1,9 +1,13 @@
+# swap files and such
 *~
 \#*
 *elc
 
+# history and whatnot
 /url/*
 /eshell/history
 /elpa/archives
-
 tramp
+
+# secrets!
+secrets.el.gpg

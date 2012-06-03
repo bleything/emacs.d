@@ -14,6 +14,9 @@ Pretty straightforward. Just clone:
 
     $ git clone git://github.com/bleything/dotemacs.git ~/.emacs.d
 
+If you want, you can create a `~/.emacs.d/secrets.el.gpg` file that'll be loaded
+at startup.
+
 What's Inside?!
 ------------------------------------------------------------------------
 
