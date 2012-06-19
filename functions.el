@@ -46,3 +46,9 @@
   (interactive "r")
   (align-regexp beg end "\\( \\)=>?"))
 (global-set-key (kbd "C-c [") 'bb-align-assignment-or-hashrocket)
+
+;;; opens a new 80-column split with my org file in it
+(defun bb-org () (interactive)
+  (split-window-right -82) ;; +2 for the sidebars
+  (switch-window)
+  (find-file "~/Dropbox/todo.org"))
