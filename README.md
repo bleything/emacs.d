@@ -39,6 +39,7 @@ Also, some syntax definitions:
 * [clojure-mode](http://github.com/technomancy/clojure-mode)
 * [io-mode](http://www.alcyone.com/software/io-mode/)
 * [markdown-mode](http://jblevins.org/projects/markdown-mode/)
+* [processing-mode](http://gitorious.org/processing-emacs)
 * [prolog-mode](http://www.emacswiki.org/emacs/PrologMode)
 * [ruby-mode](http://www.emacswiki.org/emacs/RubyMode)
 * [scss-mode](https://github.com/antonj/scss-mode)
