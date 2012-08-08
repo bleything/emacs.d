@@ -73,12 +73,12 @@
 (setq custom-file (concat user-emacs-directory "custom.el"))
 (load-config "custom.el")
 
-;;; if we have an encrypted secrets file, load it on up
-(if (file-exists-p (concat user-emacs-directory "secrets.el.gpg"))
-    (load-config "secrets.el.gpg"))
-
 ;;; and the rest of our configs
 (load-config "functions.el") ;; personal helper functions
 (load-config "languages.el") ;; settings for various languages
 (load-config "tools.el")     ;; settings for various tools
 (load-config "window.el")    ;; window settings (colors, status bars, etc)
+
+;;; if we have an encrypted secrets file, load it on up
+(if (file-exists-p (concat user-emacs-directory "secrets.el.gpg"))
+    (load-config "secrets.el.gpg"))
