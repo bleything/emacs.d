@@ -31,14 +31,11 @@
 ;;; Color Options
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;;; helper function for loading color themes
-(defun use-color-theme (name)
-  (interactive "sColor theme: ")
-  (load-file (concat user-emacs-directory "colors/" name ".el"))
-  (eval (read (concat "(color-theme-" name ")"))))
+;;; add our color themes to the load path
+(add-to-list 'custom-theme-load-path "~/.emacs.d/colors")
 
-;;; ...aaand set our color theme
-(use-color-theme "tomorrow-night")
+;;; and enable tomorrow-night
+(load-theme 'tomorrow-night)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; mouse options

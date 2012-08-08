@@ -23,7 +23,6 @@ What's Inside?!
 My own personal settings, tuned to be super rad. Also, some plugins:
 
 * [ack-and-a-half](https://github.com/jhelwig/ack-and-a-half)
-* [color-theme](http://www.nongnu.org/color-theme)
 * [inf-ruby](https://github.com/nonsequitur/inf-ruby)
 * [magit](http://philjackson.github.com/magit/)
 * [paredit](http://www.emacswiki.org/emacs/ParEdit)
