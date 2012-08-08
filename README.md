@@ -45,11 +45,8 @@ Also, some syntax definitions:
 * [scss-mode](https://github.com/antonj/scss-mode)
 * [yaml-mode](https://github.com/yoshiki/yaml-mode)
 
-Also, some color themes, some with slight modifications by me:
-
-* [Railscasts](https://github.com/olegshaldybin/color-theme-railscasts)
-* [Twilight](https://github.com/crafterm/twilight-emacs)
-* [Tomorrow Night](https://github.com/ChrisKempson/Tomorrow-Theme)
+Also the [Tomorrow Night](https://github.com/ChrisKempson/Tomorrow-Theme) color
+theme.
 
 Credits
 ------------------------------------------------------------------------
