@@ -69,6 +69,10 @@
 (defun load-config (file)
   (load-file (concat user-emacs-directory file)))
 
+;;; set our customize file to custom.el and load it
+(setq custom-file (concat user-emacs-directory "custom.el"))
+(load-config "custom.el")
+
 ;;; if we have an encrypted secrets file, load it on up
 (if (file-exists-p (concat user-emacs-directory "secrets.el.gpg"))
     (load-config "secrets.el.gpg"))
