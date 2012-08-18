@@ -44,8 +44,8 @@ Also, some syntax definitions:
 * [scss-mode](https://github.com/antonj/scss-mode)
 * [yaml-mode](https://github.com/yoshiki/yaml-mode)
 
-Also the [Tomorrow Night](https://github.com/ChrisKempson/Tomorrow-Theme) color
-theme.
+Also the [Tomorrow Night](https://github.com/ChrisKempson/Tomorrow-Theme) and
+[Solarized](http://ethanschoonover.com/solarized) color themes.
 
 Credits
 ------------------------------------------------------------------------
