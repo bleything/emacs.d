@@ -29,6 +29,7 @@ My own personal settings, tuned to be super rad. Also, some plugins:
 * [pianobar](http://www.emacswiki.org/emacs/PianobarMode)
 * [rainbow-delimiters](http://www.emacswiki.org/emacs/RainbowDelimiters)
 * [rainbow-mode](http://julien.danjou.info/software/rainbow-mode)
+* [rhtml-mode](https://github.com/eschulte/rhtml)
 * [rvm](https://github.com/senny/rvm.el)
 * [SLIME](http://common-lisp.net/project/slime)
 * [switch-window](https://github.com/dimitri/switch-window)
