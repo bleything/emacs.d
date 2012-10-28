@@ -3,6 +3,7 @@
 ;; Copyright (C) 2012 Jacob Helwig <jacob@technosorcery.net>
 ;; Alexey Lebedeff <binarin@binarin.ru>
 ;; Andrew Stine <stine.drew@gmail.com>
+;; Derek Chen-Becker <derek@precog.com>
 ;; Gleb Peregud <gleber.p@gmail.com>
 ;; Kim van Wyk <vanwykk@gmail.com>
 ;; Ronaldo M. Ferraz <ronaldoferraz@gmail.com>
@@ -10,7 +11,7 @@
 ;;
 ;; Author: Jacob Helwig <jacob+ack@technosorcery.net>
 ;; Homepage: http://technosorcery.net
-;; Version: 1.0.0
+;; Version: 1.1.0
 ;; URL: https://github.com/jhelwig/ack-and-a-half
 ;;
 ;; This file is NOT part of GNU Emacs.
@@ -89,6 +90,13 @@
   "*The location of the ack executable"
   :group 'ack-and-a-half
   :type 'file)
+
+(defcustom ack-and-a-half-buffer-name "*Ack-and-a-half*"
+  "*The name of the ack-and-a-half buffer"
+  :group 'ack-and-a-half
+  :type 'string)
+
+(defun ack-buffer-name (mode) ack-and-a-half-buffer-name)
 
 (defcustom ack-and-a-half-arguments nil
   "*Extra arguments to pass to ack."
@@ -211,6 +219,7 @@ confirmed.  If t, then always prompt for the directory to use."
     (plone-mode "plone")
     (python-mode "python")
     (ruby-mode "ruby")
+    (scala-mode "scala")
     (scheme-mode "scheme")
     (shell-script-mode "shell")
     (skipped-mode "skipped")
@@ -374,6 +383,8 @@ When optional fourth argument is non-nil, treat the from as a regular expression
                             (list "--")
                             (list (ack-and-a-half-shell-quote pattern))
                             ))
+    (make-local-variable 'compilation-buffer-name-function)
+    (setq compilation-buffer-name-function 'ack-buffer-name)
     (compilation-start (mapconcat 'identity (nconc (list ack-and-a-half-executable) arguments) " ")
                        'ack-and-a-half-mode)))
 
