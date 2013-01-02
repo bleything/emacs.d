@@ -6,7 +6,7 @@
 ;; URL: http://github.com/nonsequitur/inf-ruby
 ;; Created: 8 April 1998
 ;; Keywords: languages ruby
-;; Version: 2.2.3
+;; Version: 2.2.4
 
 ;;; Commentary:
 ;;
@@ -16,9 +16,9 @@
 ;; * drop the file somewhere on your load path (perhaps ~/.emacs.d)
 ;; * Add the following lines to your .emacs file:
 ;;    (autoload 'inf-ruby "inf-ruby" "Run an inferior Ruby process" t)
-;;    (autoload 'inf-ruby-keys "inf-ruby" "" t)
+;;    (autoload 'inf-ruby-setup-keybindings "inf-ruby" "" t)
 ;;    (eval-after-load 'ruby-mode
-;;      '(add-hook 'ruby-mode-hook 'inf-ruby-keys))
+;;      '(add-hook 'ruby-mode-hook 'inf-ruby-setup-keybindings))
 
 ;;; TODO:
 ;;
@@ -80,7 +80,7 @@ next one.")
     ("^\tfrom \\([^\(].*\\):\\([1-9][0-9]*\\)\\(:in `.*'\\)?$" 1 2)))
 
 ;;;###autoload
-(defun inf-ruby-keys ()
+(defun inf-ruby-setup-keybindings ()
   "Set local key defs to invoke inf-ruby from ruby-mode."
   (define-key ruby-mode-map "\M-\C-x" 'ruby-send-definition)
   (define-key ruby-mode-map "\C-x\C-e" 'ruby-send-last-sexp)
@@ -208,7 +208,7 @@ of `ruby-program-name').  Runs the hooks `inferior-ruby-mode-hook'
   (setq name (or name "ruby"))
 
   (if (not (comint-check-proc inf-ruby-buffer))
-      (let ((commandlist (split-string command)))
+      (let ((commandlist (split-string-and-unquote command)))
         (set-buffer (apply 'make-comint name (car commandlist)
                            nil (cdr commandlist)))
         (inf-ruby-mode)))
@@ -326,8 +326,15 @@ Then switch to the process buffer."
 
 (defun ruby-escape-single-quoted (str)
   (replace-regexp-in-string "'" "\\\\'"
-    (replace-regexp-in-string "\n" "\\\\n" 
+    (replace-regexp-in-string "\n" "\\\\n"
       (replace-regexp-in-string "\\\\" "\\\\\\\\" str))))
+
+(defun inf-ruby-fix-completions-on-windows ()
+  "On Windows, the string received by `accept-process-output'
+starts with the last line that was sent to the Ruby process.
+The reason for this is unknown. Remove this line from `completions'."
+  (if (eq system-type 'windows-nt)
+    (setq completions (cdr completions))))
 
 (defun inf-ruby-completions (seed)
   "Return a list of completions for the line of ruby code starting with SEED."
@@ -339,7 +346,8 @@ Then switch to the process buffer."
                                       (ruby-escape-single-quoted seed)))
     (while (and (not (string-match inf-ruby-prompt-pattern kept))
                 (accept-process-output proc 2)))
-    (setq completions (cdr (butlast (split-string kept "\r?\n") 2)))
+    (setq completions (butlast (split-string kept "\r?\n") 2))
+    (inf-ruby-fix-completions-on-windows)
     (set-process-filter proc comint-filt)
     completions))
 
@@ -373,7 +381,7 @@ Module used by readline when running irb through a terminal"
 
 ;;;###autoload
 (eval-after-load 'ruby-mode
-  '(add-hook 'ruby-mode-hook 'inf-ruby-keys))
+  '(inf-ruby-setup-keybindings))
 
 (provide 'inf-ruby)
 ;;; inf-ruby.el ends here

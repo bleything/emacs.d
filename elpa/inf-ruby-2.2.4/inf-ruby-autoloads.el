@@ -3,11 +3,11 @@
 ;;; Code:
 
 
-;;;### (autoloads (run-ruby inf-ruby inf-ruby-keys) "inf-ruby" "inf-ruby.el"
-;;;;;;  (20293 31706))
+;;;### (autoloads (run-ruby inf-ruby inf-ruby-setup-keybindings)
+;;;;;;  "inf-ruby" "inf-ruby.el" (20708 51036 0 0))
 ;;; Generated autoloads from inf-ruby.el
 
-(autoload 'inf-ruby-keys "inf-ruby" "\
+(autoload 'inf-ruby-setup-keybindings "inf-ruby" "\
 Set local key defs to invoke inf-ruby from ruby-mode.
 
 \(fn)" nil nil)
@@ -31,11 +31,12 @@ of `ruby-program-name').  Runs the hooks `inferior-ruby-mode-hook'
 
 \(fn &optional COMMAND NAME)" t nil)
 
-(eval-after-load 'ruby-mode '(add-hook 'ruby-mode-hook 'inf-ruby-keys))
+(eval-after-load 'ruby-mode '(inf-ruby-setup-keybindings))
 
 ;;;***
 
-;;;### (autoloads nil nil ("inf-ruby-pkg.el") (20293 31706 998780))
+;;;### (autoloads nil nil ("inf-ruby-pkg.el") (20708 51036 442621
+;;;;;;  0))
 
 ;;;***
 
