@@ -8,6 +8,7 @@
 /eshell/history
 /elpa/archives
 tramp
+repl-port
 
 # secrets!
 secrets.el.gpg

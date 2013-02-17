@@ -23,13 +23,14 @@ What's Inside?!
 My own personal settings, tuned to be super rad. Also, some plugins:
 
 * [ack-and-a-half](https://github.com/jhelwig/ack-and-a-half)
+* [exec-path-from-shell](https://github.com/purcell/exec-path-from-shell)
 * [inf-ruby](https://github.com/nonsequitur/inf-ruby)
 * [magit](http://philjackson.github.com/magit/)
+* [nrepl](https://github.com/kingtim/nrepl.el)
 * [paredit](http://www.emacswiki.org/emacs/ParEdit)
 * [pianobar](http://www.emacswiki.org/emacs/PianobarMode)
 * [rainbow-delimiters](http://www.emacswiki.org/emacs/RainbowDelimiters)
 * [rainbow-mode](http://julien.danjou.info/software/rainbow-mode)
-* [rhtml-mode](https://github.com/eschulte/rhtml)
 * [rvm](https://github.com/senny/rvm.el)
 * [SLIME](http://common-lisp.net/project/slime)
 * [switch-window](https://github.com/dimitri/switch-window)
@@ -41,6 +42,7 @@ Also, some syntax definitions:
 * [markdown-mode](http://jblevins.org/projects/markdown-mode/)
 * [processing-mode](http://gitorious.org/processing-emacs)
 * [prolog-mode](http://www.emacswiki.org/emacs/PrologMode)
+* [rhtml-mode](https://github.com/eschulte/rhtml)
 * [ruby-mode](http://www.emacswiki.org/emacs/RubyMode)
 * [scss-mode](https://github.com/antonj/scss-mode)
 * [yaml-mode](https://github.com/yoshiki/yaml-mode)
