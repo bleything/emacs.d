@@ -59,9 +59,12 @@
 (require 'switch-window)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;; status bar options
+;;; mode line options
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (setq display-time-24hr-format t
       display-time-default-load-average nil)
 (display-time)
+
+(setq battery-mode-line-format " [%L: %b%p%% %t]")
+(display-battery-mode)
