@@ -42,6 +42,7 @@ Also, some syntax definitions:
 * [markdown-mode](http://jblevins.org/projects/markdown-mode/)
 * [processing-mode](http://gitorious.org/processing-emacs)
 * [prolog-mode](http://www.emacswiki.org/emacs/PrologMode)
+* [puppet-mode](https://github.com/puppetlabs/puppet-syntax-emacs)
 * [rhtml-mode](https://github.com/eschulte/rhtml)
 * [ruby-mode](http://www.emacswiki.org/emacs/RubyMode)
 * [scss-mode](https://github.com/antonj/scss-mode)
