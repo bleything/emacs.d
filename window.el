@@ -18,8 +18,8 @@
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 
 ;;; set initial frame to be kinda big
-(add-to-list 'default-frame-alist '(width . 170))
-(add-to-list 'default-frame-alist '(height . 51))
+(add-to-list 'default-frame-alist '(width . 120))
+(add-to-list 'default-frame-alist '(height . 35))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Font
