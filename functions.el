@@ -18,6 +18,13 @@
   (insert-char ?\; 80)
   (insert "\n"))
 
+;;; get the face at the point
+(defun what-face (pos)
+  (interactive "d")
+  (let ((face (or (get-char-property (point) 'read-face-name)
+                  (get-char-property (point) 'face))))
+    (if face (message "Face: %s" face) (message "No face at %d" pos))))
+
 ;;; textmate-style comment/uncomment cmd-/ for toggling comments
 (global-set-key (kbd "s-/") 'comment-or-uncomment-region-or-line)
 (defun comment-or-uncomment-region-or-line () (interactive)
