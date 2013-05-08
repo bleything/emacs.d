@@ -66,5 +66,26 @@
       display-time-default-load-average nil)
 (display-time)
 
+(require 'battery)
+(setq battery-update-interval 1)
 (setq battery-mode-line-format " [%L: %b%p%% %t]")
+
+;;; override battery-update to set the face to orange so it's actually visible
+(defun battery-update ()
+  "Update battery status information in the mode line."
+  (let ((data (and battery-status-function (funcall battery-status-function))))
+    (setq battery-mode-line-string
+          (propertize (if (and battery-mode-line-format
+                               (<= (car (read-from-string (cdr (assq ?p data))))
+                                   battery-mode-line-limit))
+                          (battery-format
+                           battery-mode-line-format         data)
+                        "")
+                      'face
+                      (and (<= (car (read-from-string (cdr (assq ?p data))))
+                               battery-load-critical)
+                           'warning)
+                      'help-echo "Battery status information")))
+  (force-mode-line-update))
+
 (display-battery-mode)
