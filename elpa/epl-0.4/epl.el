@@ -5,7 +5,7 @@
 ;; Author: Sebastian Wiesner <lunaryorn@gmail.com>
 ;; Maintainer: Johan Andersson <johan.rejeep@gmail.com>
 ;;     Sebastian Wiesner <lunaryorn@gmail.com>
-;; Version: 0.3
+;; Version: 0.4
 ;; Package-Requires: ((cl-lib "0.3"))
 ;; Keywords: convenience
 ;; URL: http://github.com/cask/epl
@@ -306,7 +306,7 @@ BUFFER defaults to the current buffer."
 
 Return an `epl-package' object with the header metadata."
   (with-temp-buffer
-    (insert-file-contents-literally file-name)
+    (insert-file-contents file-name)
     (epl-package-from-buffer (current-buffer))))
 
 (defun epl-package-from-tar-file (file-name)
