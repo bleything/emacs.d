@@ -4,7 +4,7 @@
 
 
 ;;;### (autoloads (clojure-mode) "clojure-mode" "clojure-mode.el"
-;;;;;;  (20827 6595))
+;;;;;;  (21232 19701 0 0))
 ;;; Generated autoloads from clojure-mode.el
 
 (autoload 'clojure-mode "clojure-mode" "\
@@ -21,11 +21,11 @@ if that value is non-nil.
 
 \(fn)" t nil)
 
-(put 'clojure-test-ns-segment-position 'safe-local-variable 'integerp)
+(add-to-list 'auto-mode-alist '("\\.clj[sx]?\\'" . clojure-mode))
 
-(put 'clojure-mode-load-command 'safe-local-variable 'stringp)
+(add-to-list 'auto-mode-alist '("\\.dtm\\'" . clojure-mode))
 
-(add-to-list 'auto-mode-alist '("\\.clj\\'" . clojure-mode))
+(add-to-list 'auto-mode-alist '("\\.edn\\'" . clojure-mode))
 
 (add-to-list 'interpreter-mode-alist '("jark" . clojure-mode))
 
@@ -33,7 +33,8 @@ if that value is non-nil.
 
 ;;;***
 
-;;;### (autoloads nil nil ("clojure-mode-pkg.el") (20827 6595 229842))
+;;;### (autoloads nil nil ("clojure-mode-pkg.el") (21232 19701 305745
+;;;;;;  0))
 
 ;;;***
 
