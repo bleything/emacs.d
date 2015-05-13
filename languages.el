@@ -107,6 +107,9 @@
 (add-to-list 'auto-mode-alist '("Vagrantfile" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.irbrc$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("config\\.ru$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("Berksfile" . ruby-mode))
+(add-to-list 'auto-mode-alist '("Guardfile" . ruby-mode))
+
 (add-to-list 'auto-mode-alist '("\\.erb$" . rhtml-mode))
 
 ;;; disable inserting encoding comments in utf-8 files
