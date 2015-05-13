@@ -60,6 +60,14 @@
 (add-to-list 'auto-mode-alist '("\\.mk?d$" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.markdown$" . markdown-mode))
 
+;;; use orgtbl mode on markdown files
+(require 'org-table)
+(add-hook 'markdown-mode-hook 'orgtbl-mode)
+
+;;; convert tables to github-flavored markdown on save
+(add-hook 'markdown-mode-hook (lambda ()
+                                (add-hook 'before-save-hook 'bb-org-tables-to-gfm nil 'make-it-local)))
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Processing
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

@@ -59,3 +59,9 @@
   (split-window-right -82) ;; +2 for the sidebars
   (switch-window)
   (find-file "~/Dropbox/todo.org"))
+
+;;; converts org-mode tables to github-flavored markdown
+(defun bb-org-tables-to-gfm ()
+  (save-excursion
+    (goto-char (point-min))
+    (replace-string "-+-" "-|-")))
