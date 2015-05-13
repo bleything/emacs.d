@@ -30,7 +30,7 @@
 ;; 0.7 - 2010-08-23 - window-dedicated-p
 ;;
 ;;  - temporarily unset the window dedicated flag for displaying the
-;;    numbers, patch from René Kyllingstad <Rene@Kyllingstad.com>
+;;    numbers, patch from RenÃ© Kyllingstad <Rene@Kyllingstad.com>
 ;;  - fix timeout and RET handling wrt to not changing window selection
 ;;
 ;; 0.6 - 2010-08-12 - *Minibuf-1*

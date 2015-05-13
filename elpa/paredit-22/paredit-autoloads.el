@@ -1,9 +1,9 @@
 ;;; paredit-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-
+(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads (paredit-mode) "paredit" "paredit.el" (20287 63523))
+;;;### (autoloads nil "paredit" "paredit.el" (21843 35575 0 0))
 ;;; Generated autoloads from paredit.el
 
 (autoload 'paredit-mode "paredit" "\
@@ -19,15 +19,9 @@ Paredit behaves badly if parentheses are imbalanced, so exercise
 
 ;;;***
 
-;;;### (autoloads nil nil ("paredit-pkg.el") (20287 63523 164253))
-
-;;;***
-
-(provide 'paredit-autoloads)
 ;; Local Variables:
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
-;; coding: utf-8
 ;; End:
 ;;; paredit-autoloads.el ends here
