@@ -79,6 +79,7 @@
 (load-config "custom.el")
 
 ;;; and the rest of our configs
+(load-config "evil.el")      ;; evil-mode config
 (load-config "functions.el") ;; personal helper functions
 (load-config "languages.el") ;; settings for various languages
 (load-config "tools.el")     ;; settings for various tools
