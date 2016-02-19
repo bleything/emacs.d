@@ -53,10 +53,10 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (setq package-archives '(
-                         ("gnu"       . "http://elpa.gnu.org/packages/")
-                         ("marmalade" . "http://marmalade-repo.org/packages/")
-                         ("tromey"    . "http://tromey.com/elpa/")
-                         ("melpa"     . "http://melpa.org/packages/")))
+                         ("gnu"          . "http://elpa.gnu.org/packages/")
+                         ("marmalade"    . "http://marmalade-repo.org/packages/")
+                         ("tromey"       . "http://tromey.com/elpa/")
+                         ("melpa-stable" . "http://stable.melpa.org/packages/")))
 (package-initialize)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
