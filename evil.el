@@ -23,3 +23,10 @@
 
 ;;; set the leader to ,
 (evil-leader/set-leader ",")
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; evil-commentary plugin
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(evil-commentary-mode)
+(evil-leader/set-key "cc" 'evil-commentary-line)
