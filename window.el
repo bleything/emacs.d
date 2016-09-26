@@ -38,8 +38,8 @@
 ;;; add our color themes to the load path
 (add-to-list 'custom-theme-load-path "~/.emacs.d/colors")
 
-;;; and enable tomorrow-night
-(load-theme 'tomorrow-night)
+;;; and load our favorite theme, whatever that might be today
+(load-theme 'tangotango)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; mouse options
